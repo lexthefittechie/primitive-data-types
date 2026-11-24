@@ -6,7 +6,7 @@
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let newBoolean
+let newBoolean = true;
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -25,9 +25,11 @@ let dadsHeight = generateRandomNumber(100, 200)
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let momIsTaller
-let dadIsTaller
-let areTheSameHeight
+let momIsTaller = momsHeight > dadsHeight;
+
+let dadIsTaller = dadsHeight > momsHeight;
+
+let areTheSameHeight = momsHeight === dadsHeight;
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -46,7 +48,7 @@ let studentEssay = generateSudentEssay()
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let notPlagiarised
+let notPlagiarised = !studentEssay.includes(keyPhrase);
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -68,10 +70,13 @@ let thresholdForTall = 150
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let siblingsAreTall
-let siblingsAreShort
-let atLeastOneIsTall
-let onlyOneIsTall
+let siblingsAreTall = sistersHeight > thresholdForTall && brothersHeight > thresholdForTall;
+
+let siblingsAreShort = sistersHeight < thresholdForTall && brothersHeight < thresholdForTall;
+
+let atLeastOneIsTall = sistersHeight > thresholdForTall || brothersHeight > thresholdForTall;
+
+let onlyOneIsTall = (sistersHeight > thresholdForTall) !== (brothersHeight > thresholdForTall);
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -94,7 +99,10 @@ let secretCode = generateSecretCode()
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let codeIsValid
+let codeIsValid =
+    /^[A-Z]$/.test(secretCode[4]) &&
+    /^[0-9]$/.test(secretCode[9]) &&
+    secretCode.length === 15;
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -115,13 +123,13 @@ let truthy1, truthy2
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-// falsy1 = Boolean("")
-// falsy2 = Boolean(0)
-// falsy3 = Boolean(undefined)
-// falsy4 = Boolean(null)
+falsy1 = Boolean("");
+falsy2 = Boolean(0);
+falsy3 = Boolean(undefined);
+falsy4 = Boolean(null);
 
-// truthy1 = Boolean("non-empty string")
-// truthy2 = Boolean(1)
+truthy1 = Boolean("non-empty string");
+truthy2 = Boolean(1);
 
 ////////////////////////////////////////////////////////////////////////
 
